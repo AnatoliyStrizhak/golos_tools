@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+
+    "name": "Golos.io - Voting Power",
+    "description": "Adds voting power image to golos.io site header",
+    "version": "1.0",
+
+    "content_scripts": [
+        {
+            "matches": ["*://golos.io/*"],
+            "js": ["golos.min.js","getpwr.js"]
+        }
+    ],
+
+    "permissions": ["tabs", "*://golos.io/*"],
+
+    "browser_action": {
+        "default_icon": "1.png",
+        "default_title": "Golos Voting power"
+    }
+}
