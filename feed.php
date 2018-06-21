@@ -24,8 +24,8 @@ else
 }
 
 
-$client = new Client("wss://ws17.golos.io/");
-$client->send('{"id":0,"method":"call","jsonrpc":"2.0","params":["social_network","'.$apicall.'",[{"select_authors":['.$usr.'],"limit":'.$limit.'}]]}');
+$client = new Client("wss://ws.golos.io/");
+$client->send('{"id":0,"method":"call","jsonrpc":"2.0","params":["tags","'.$apicall.'",[{"select_authors":['.$usr.'],"limit":'.$limit.'}]]}');
 
 $golosPosts=json_decode($client->receive(),$assoc=true);
 
